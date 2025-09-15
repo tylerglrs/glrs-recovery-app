@@ -1,7 +1,5 @@
 'use client';
 
-'use client';
-
 import React, { useState, useEffect } from 'react';
 
 // Component definitions
@@ -55,6 +53,7 @@ const TabsContent = ({ children, value, activeTab }) => {
 };
 const Avatar = ({ children, className }) => <div className={`rounded-full bg-gray-200 flex items-center justify-center ${className}`}>{children}</div>;
 const AvatarFallback = ({ children }) => <span>{children}</span>;
+const AvatarImage = () => null;
 const Slider = ({ value, onValueChange, max = 100, step = 1, className }) => {
   return <input type="range" value={value[0]} onChange={e => onValueChange([parseInt(e.target.value)])} max={max} step={step} className={className} />;
 };
@@ -73,6 +72,7 @@ const Target = () => <span>🎯</span>;
 const Heart = () => <span>❤️</span>;
 const AlertCircle = () => <span>ℹ️</span>;
 
+// Main App Component
 export default function GLRSApp() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
